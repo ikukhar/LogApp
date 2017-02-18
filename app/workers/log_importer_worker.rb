@@ -2,7 +2,7 @@ class LogImporterWorker
   include Sidekiq::Worker
 
   def perform(*args)
-    f = File.open("#{Rails.root}/log/main.log", "r+")
+    f = File.open("#{Rails.root}/log/main.log", "r")
 
     Log.bulk_insert do |worker|
       f.each_line do |line|
