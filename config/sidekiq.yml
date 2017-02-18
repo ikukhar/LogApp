@@ -1,0 +1,4 @@
+:schedule:
+  log_import:
+    every: 15m   # Runs once per minute
+    class: LogImporterWorker
